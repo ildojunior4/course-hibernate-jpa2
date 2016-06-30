@@ -1,9 +1,6 @@
 package com.hir.course.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by ildo-zrj on 28/06/2016.
@@ -13,8 +10,8 @@ public class Client {
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private Long code;
-	
+	@Column(name = "code")
+	private Long id;
 	private String name;
 	private Integer age;
 	private String sex;
@@ -28,12 +25,12 @@ public class Client {
 		this.name = name;
 	}
 
-	public Long getCode() {
-		return code;
+	public Long getId() {
+		return id;
 	}
 
-	public void setCode(Long id) {
-		this.code = id;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Integer getAge() {

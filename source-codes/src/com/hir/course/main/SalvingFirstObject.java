@@ -1,6 +1,7 @@
 package com.hir.course.main;
 
 import com.hir.course.model.Client;
+import org.hibernate.HibernateException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -15,7 +16,20 @@ public class SalvingFirstObject {
 		EntityManager em = emf.createEntityManager();
 
 		Client client = new Client();
-		em.persist(client);
-		//em.close();
+		client.setName("ILDO ZACARIAS RIBEIRO JUNIOR");
+		client.setAge(21);
+		client.setJob("Programmer -");
+		client.setSex("M");
+		try{
+			em.getTransaction().begin();
+			em.persist(client);
+			em.getTransaction().commit();
+			System.out.print("Client salved!");
+		}catch (HibernateException h){
+			System.out.print(h.getMessage());
+		}finally {
+			em.close();
+			emf.close();
+		}
 	}
 }

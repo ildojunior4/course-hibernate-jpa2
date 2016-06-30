@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
-    <facet type="hibernate" name="Hibernate">
-      <configuration>
-        <datasource-map />
-        <naming-strategy-map />
-      </configuration>
-    </facet>
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
         <datasource-mapping>
-          <factory-entry name="samplePU" />
+          <factory-entry name="examplePU" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
       </configuration>
@@ -25,7 +19,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Hibernate_5.2.0_FINAL" level="project" />
-    <orderEntry type="library" name="Hibernate_5.2.0_FINAL" level="project" />
+    <orderEntry type="library" name="Hibernate_4.2.3_FINAL" level="project" />
+    <orderEntry type="library" name="Hibernate_4.2.3_FINAL" level="project" />
   </component>
 </module>
